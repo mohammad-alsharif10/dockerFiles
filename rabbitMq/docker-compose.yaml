@@ -2,13 +2,13 @@ version: "3.9"
 services:
   rabbitMq:
     image: library/rabbitmq:management
-    container_name: rabbitMq-container
+    container_name: rabbitMQ
     environment:
       RABBITMQ_DEFAULT_USER: user
       RABBITMQ_DEFAULT_PASS: hggih;fv10
     ports:
-      - 5672:5672
-      - 15672:15672
+      - "5672:5672"
+      - "15672:15672"
     volumes:
       - G:\projects\docker\vloumes\rabbitMq:/var/lib/rabbitmq/
     restart: unless-stopped
