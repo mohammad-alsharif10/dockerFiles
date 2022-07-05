@@ -7,9 +7,9 @@ services:
       ACCEPT_EULA: Y
       SA_PASSWORD: Hggih;fv10
     volumes:
-      - G:\projects\docker\vloumes\sql-server\:/var/opt/mssql/data
+      - D:\projects\docker\volumes\sql-server\:/var/opt/mssql/data
     ports:
-      - 1433:1433
+      - "1433:1433"
     restart: unless-stopped
 
 

@@ -1,14 +1,15 @@
-version: '3.9'
-
+version: "3.9"
 services:
-
-  db:
-    image: mysql
-    container_name: mysql_image
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: example
+  jenkins:
+    image: jenkins/jenkins
+    privileged: true
+    user: root
     ports:
-      - 3306:3306
+      - "1111:8080"
+      - "2222:5000"
+      - "1234:1234"
+    container_name: jenkins
+    volumes:
+      - D:\projects\docker\volumes\jenkins\:/var/jenkins_home
 
 
