@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  postgress:
+    image: postgres
+    restart: always
+    container_name: postgress
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: user
+    volumes:
+      - G:\projects\docker\vloumes\postgress\:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"

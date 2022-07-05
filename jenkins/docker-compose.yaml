@@ -1,15 +1,11 @@
-version: "3.9"
+version: '3.9'
 services:
   jenkins:
-    image: jenkins/jenkins
-    privileged: true
-    user: root
+    image: jenkins/jenkins:lts
     ports:
-      - "1111:8080"
-      - "2222:5000"
+      - "8080:8080"
       - "1234:1234"
     container_name: jenkins
     volumes:
-      - D:\projects\docker\volumes\jenkins\:/var/jenkins_home
-
+      - G:\projects\docker\vloumes\jenkins1\:/var/jenkins_home
 
