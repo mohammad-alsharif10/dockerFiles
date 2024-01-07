@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:14.0
+    container_name: postgres12
+    ports:
+      - "5432:5432"
+    environment:
+#      PGUSER: spsradminuser
+      POSTGRES_USER: spsradminuser
+      POSTGRES_PASSWORD: Spsru123456#
+    #      POSTGRES_DB: spsr
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
