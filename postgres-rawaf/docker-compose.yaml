@@ -5,7 +5,11 @@ services:
     restart: always
     ports:
       - "5432:5432"
-      - "5433:5433"
     environment:
       POSTGRES_PASSWORD: example
       POSTGRES_USER: example
+    volumes:
+      - rawaf-db:/var/lib/postgresql/data
+volumes:
+  remat-db:
+    driver: local

@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  db-test:
+    image: postgis/postgis:14-3.2
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5433'
+    volumes:
+      - remat-db:/var/lib/postgresql/data
+      - docker-compose/init/:/docker-entrypoint-initdb.d
+volumes:
+  remat-db:
+    driver: local
