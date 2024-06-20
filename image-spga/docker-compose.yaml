@@ -1,15 +1,15 @@
 version: '3.8'
 services:
   db-test:
-    image: remat-postgres:latest
+    image: mohammadalsharif/spga-db
     restart: always
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - '5434:5432'
+      - '5432:5432'
     volumes:
-      - remat-db:/var/lib/postgresql/data
+      - spga-db1:/var/lib/postgresql/data
 volumes:
-  remat-db:
+  spga-db1:
     driver: local

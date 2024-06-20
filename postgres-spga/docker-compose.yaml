@@ -9,7 +9,7 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - remat-db:/var/lib/postgresql/data
+      - spga-db:/var/lib/postgresql/data
 volumes:
-  remat-db:
+  spga-db:
     driver: local
