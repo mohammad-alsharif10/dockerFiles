@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
     volumes:
-      - rawaf-db:/var/lib/postgresql/data
+      - rawaf-db1:/var/lib/postgresql/data
 volumes:
-  rawaf-db:
+  rawaf-db1:
     driver: local
