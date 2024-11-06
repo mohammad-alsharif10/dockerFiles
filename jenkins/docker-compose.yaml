@@ -5,7 +5,7 @@ services:
     image: jenkins/jenkins:lts  # Official Jenkins image with LTS (Long-Term Support) version
     container_name: jenkins-server
     ports:
-      - "5555:5555"  # Jenkins web UI
+      - "5555:8080"  # Jenkins web UI
       - "50000:50000"  # Port for Jenkins agents
     volumes:
       - jenkins_home:/var/jenkins_home  # Persistent storage for Jenkins data
